@@ -1,0 +1,198 @@
+/* styles.css for Betting Exchange dApp with Teal and Gold theme */
+
+/* Basic resets and global settings */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #eaf3f3; /* Slightly lighter shade of teal for the background */
+  color: #333;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 900px;
+    padding: 2rem;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 3rem;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #008080; /* Teal */
+  color: #ffd700; /* Gold */
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+header div {
+  margin-top: 1rem;
+}
+
+#connect-button {
+  background-color: #ffd700; /* Gold */
+  color: #008080; /* Teal */
+  border: 2px solid #ffd700;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+#connect-button:hover {
+  background-color: #e5c100;
+  transform: translateY(-2px); /* subtle "lift" effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #008080;
+}
+
+input[type="number"], input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+  border-color: #008080;
+  box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.2); /* Light teal outline for focus */
+}
+
+button {
+  display: block;
+  background-color: #008080; /* Teal */
+  color: #ffd700; /* Gold */
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #006666; /* A slightly darker teal */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12);
+}
+
+#error-message {
+  padding: 1rem;
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffd700; /* Gold */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#available-bets, #active-bets {
+  min-height: 100px;
+  padding: 1rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bet-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.bet-actions p {
+  flex: 3;
+}
+
+.bet-actions button {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+#create-bet {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#create-bet:hover {
+  background-color: #45a049;
+}
+
+#create-bet:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Making Typography Pop */
+h1, h2, header div {
+  position: relative;
+}
+
+h1::after, h2::after, header div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #ffd700; /* Gold */
+}
